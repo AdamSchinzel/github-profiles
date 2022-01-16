@@ -23,6 +23,7 @@ async function getRepos(username) {
 }
 
 function createUserCard(user) {
+  console.log(user);
   const cardHTML = `
         <div class="card">
             <div>
@@ -43,7 +44,15 @@ function createUserCard(user) {
         </div>
     `;
 
-  main.innerHTML = cardHTML;
+  const NotFoundHtml = `
+        <div class="card">
+          <div class="not-found">
+            <h2>User not found 👻</h2>
+          </div>
+        </div>
+    `;
+
+  main.innerHTML = user.message == "Not Found" ? NotFoundHtml : cardHTML;
 }
 
 function addReposToCard(repos) {

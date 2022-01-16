@@ -93,3 +93,8 @@ input:focus {
   margin-bottom: 0.5rem;
   text-decoration: none;
 }
+
+.not-found {
+  font-size: 1 rem;
+  color: #fff;
+}
